@@ -4,14 +4,16 @@ using BethanysPieShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BethanysPieShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191207165412_isSweet")]
+    partial class isSweet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,6 +44,35 @@ namespace BethanysPieShop.Migrations
                     b.HasKey("FeedbackId");
 
                     b.ToTable("Feedbacks");
+                });
+
+            modelBuilder.Entity("BethanysPieShop.Models.Pie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageThumbnailUrl");
+
+                    b.Property<string>("ImageUrl");
+
+                    b.Property<bool>("IsInStock");
+
+                    b.Property<bool>("IsPieOfTheWeek");
+
+                    b.Property<bool>("IsSweet");
+
+                    b.Property<string>("LongDescription");
+
+                    b.Property<string>("Name");
+
+                    b.Property<decimal>("Price");
+
+                    b.Property<string>("ShortDescription");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
