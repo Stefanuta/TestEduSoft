@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
     <link href="~/content/site.css" rel="stylesheet"/>
+    <link href="~/content/da-slider.css" rel="stylesheet" />
+    <link href="~/content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/content/isotope.css" rel="stylesheet" />
+    <link href="~/content/style.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -14,7 +18,7 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">QuizIT</a></li>
                     <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
-                    <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
                 </ul>
             </div>
         </div>
@@ -24,6 +28,18 @@
             @RenderBody()
         </div>
     </div>
-    @RenderSection("Scripts",required:false)
+    @RenderSection("Scripts", required: false)
+
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/bootstrap/js/custom.js"></script>
+    <script src="~/lib/bootstrap/js/google-map.js"></script>
+    <script src="~/lib/bootstrap/js/html5shiv.js"></script>
+    <script src="~/lib/bootstrap/js/jquery.cslider.js"></script>
+    <script src="~/lib/bootstrap/js/jquery.isotope.min.js"></script>
+    <script src="~/lib/bootstrap/js/modernizr-latest.js"></script>
+    <script src="~/lib/bootstrap/js/npm.js"></script>
+    <script src="~/lib/bootstrap/js/respond.min.js"></script>
 </body>
+
+
 </html>
