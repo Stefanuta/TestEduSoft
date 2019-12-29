@@ -12,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QuizIT.Models;
 
-namespace BethanysPieShop
+namespace QuizIT
 {
     public class Startup
     {
@@ -27,12 +27,19 @@ namespace BethanysPieShop
         {
             //services.AddTransient<IPieRepository, PieRepository>();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<ApplicationUser>()
-        .AddEntityFrameworkStores<AppDbContext>();
-        //.AddDefaultUI();
+            services.AddDefaultIdentity<IdentityUser>()
+        .AddEntityFrameworkStores<AppDbContext>()
+        .AddDefaultTokenProviders()
+        .AddDefaultUI();
             //services.AddTransient<IPieRepository, PieRepository>();
             services.AddTransient<IFeedbackRepository, FeedbackRepository>();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+                options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+            });
             services.AddMvc();
         }
 

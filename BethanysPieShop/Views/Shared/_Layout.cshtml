@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
-    <link href="~/content/site.css" rel="stylesheet"/>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/content/site.css" rel="stylesheet" />
     <link href="~/content/da-slider.css" rel="stylesheet" />
     <link href="~/content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/content/isotope.css" rel="stylesheet" />
@@ -15,11 +18,22 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">QuizIT</a></li>
-                    <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <ul class="nav navbar-nav">
+
+                        <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">QuizIT</a></li>
+                        <li class="mr-auto"><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
+                        <partial name="_LoginPartial" />
+                    </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav">
+                        <li class="navbar-brand">QuizIT</li>
+                    </ul>
                     <partial name="_LoginPartial" />
-                </ul>
+                }
             </div>
         </div>
     </nav>
