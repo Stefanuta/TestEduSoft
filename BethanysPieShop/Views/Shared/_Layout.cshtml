@@ -1,6 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
-
 <!DOCTYPE html>
 
 <html>
@@ -8,22 +7,29 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="~/content/site.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/AddCourses.js"></script>
+    <script src="~/js/courses.js"></script>
+    <script src="~/js/home.js"></script>
     <link href="~/content/da-slider.css" rel="stylesheet" />
     <link href="~/content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/content/isotope.css" rel="stylesheet" />
     <link href="~/content/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>@ViewBag.Title</title>
+    <link href="~/content/home.css" rel="stylesheet" />
+
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container full-width">
             <div class="navbar-collapse collapse">
                 @if (SignInManager.IsSignedIn(User))
                 {
                     <ul class="nav navbar-nav">
 
                         <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">QuizIT</a></li>
-                        <li class="mr-auto"><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
+                        <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>
                         <partial name="_LoginPartial" />
                     </ul>
                 }
@@ -42,7 +48,7 @@
             @RenderBody()
         </div>
     </div>
-    @RenderSection("Scripts", required: false)
+
 
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
     <script src="~/lib/bootstrap/js/custom.js"></script>
@@ -53,6 +59,10 @@
     <script src="~/lib/bootstrap/js/modernizr-latest.js"></script>
     <script src="~/lib/bootstrap/js/npm.js"></script>
     <script src="~/lib/bootstrap/js/respond.min.js"></script>
+
+ 
+  
+    @RenderSection("Scripts", required: false)
 </body>
 
 

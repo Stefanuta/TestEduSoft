@@ -5,8 +5,20 @@
     background-repeat: no-repeat;
 }
 
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+.course-container {
+    background-color: white;
+    width: 100%;
+    float: left;
+    padding: 20px;
+    margin:20px;
+    padding:20px;
+}
+
+.full-width {
+    width: calc(100% - 80px);
+    box-sizing: border-box;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 

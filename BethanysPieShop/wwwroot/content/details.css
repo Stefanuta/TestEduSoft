@@ -1,0 +1,50 @@
+﻿.imageBlock {
+    background-color: white;
+    width: 50%;
+    float: left;
+    max-height: 100vh;
+}
+
+.course-container {
+    background-color: white;
+    width: 90%;
+    float: left;
+    padding: 20px;
+}
+
+#imagine {
+    width: 25vw;
+    height: 35vw;
+    margin-top: 7vw;
+    margin-left: 10vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#bookTitle {
+    text-align: left;
+    padding: 2vw;
+    margin-top: 10vw;
+    color: black;
+    font-weight: bold;
+    font-size: 1.8vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#bookAuthor {
+    text-align: left;
+    padding: 2vw;
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+#bookDescription {
+    text-align: left;
+    padding: 2vw;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+}body {
+}

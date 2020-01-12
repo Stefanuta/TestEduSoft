@@ -1,18 +1,14 @@
-/*
+
 Theme: eLearning - Free Educational Responsive Web Template
 Description: Free to use for personal and commercial use
 Author: WebThemez.com
 Website: http://webthemez.com
 Note: Please do not remove the footer backlink (webthemez.com)--(if you want to remove contact: webthemez@gmail.com)
 Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
-*/
+
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-body {
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
-}
-/*General*/
+General
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-family: 'Lato', sans-serif;
@@ -41,7 +37,7 @@ label {
     color: #777;
 }
 
-/* Header */
+ Header 
 #head {
     background: #181015 url( ../images/bg_header1.jpg) no-repeat;
     background-size: cover;
@@ -166,7 +162,7 @@ label {
     .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > .open ul > a {
         text-align: left;
     }
-/* Highlights*/
+ Highlights
 .highlight {
     margin-top: 40px;
 }
@@ -225,7 +221,7 @@ ul.list-spaces li {
     margin-bottom: 10px;
 }
 
-/* Helpers */
+ Helpers 
 .container-full {
     margin: 0 auto;
     width: 100%;
@@ -338,7 +334,7 @@ footer {
         .social a:hover {
             color: #0b9ff3;
         }
-/* Footer */
+ Footer 
 .footer1 {
     background: #fff;
     padding: 30px 0 0 0;
@@ -425,13 +421,13 @@ footer {
 #services .fa {
     color: #0b9ff3;
 }
-/* carousel */
+ carousel 
 #quote-carousel {
     padding: 0 10px 30px 10px;
     margin-top: 30px 0px 0px;
 }
 
-    /* Control buttons  */
+     Control buttons  
     #quote-carousel .carousel-control {
         background: none;
         color: #222;
@@ -439,22 +435,22 @@ footer {
         text-shadow: none;
         margin-top: 30px;
     }
-        /* Previous button  */
+         Previous button  
         #quote-carousel .carousel-control.left {
             left: -12px;
         }
-        /* Next button  */
+         Next button  
         #quote-carousel .carousel-control.right {
             right: -12px !important;
         }
-    /* Changes the position of the indicators */
+     Changes the position of the indicators 
     #quote-carousel .carousel-indicators {
         right: 50%;
         top: auto;
         bottom: 0px;
         margin-right: -19px;
     }
-        /* Changes the color of the indicators */
+         Changes the color of the indicators 
         #quote-carousel .carousel-indicators li {
             background: #c0c0c0;
         }
@@ -467,7 +463,7 @@ footer {
         width: 250px;
         height: 100px;
     }
-/* End carousel */
+ End carousel 
 
 .item blockquote {
     border-left: none;
@@ -504,7 +500,7 @@ footer ul li {
     padding: 0px;
 }
 
-/* ------- */
+ ------- 
 
 .isotopeWrapper article {
     margin-bottom: 30px;
@@ -519,7 +515,7 @@ footer ul li {
 
     #portfolio article p {
         margin-bottom: 1.45em;
-        /*set next row on the baseline*/;
+        set next row on the baseline;
     }
 
 nav#filter {
@@ -598,7 +594,7 @@ nav#filter {
 }
 
     .portfolio-item .portfolio-desc a:hover {
-        /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);*/
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
         text-decoration: none;
     }
 
@@ -630,7 +626,7 @@ nav#filter {
 }
 
 
-/*Da Slider*/
+Da Slider
 .da-slider {
     width: auto;
     height: auto;
@@ -726,7 +722,7 @@ nav#filter {
     background-size: cover;
     text-align: left;
 }
-/*Price table*/
+Price table
 .flat {
     margin: 30px 0;
 }
@@ -791,9 +787,9 @@ nav#filter {
 .footer2 a {
 padding:4px 8px;
 }
-/**
+*
   MEDIA QUERIES
-*/
+
 @media (max-width: 767px) {
     #head.secondary {
         height: 80px;
@@ -810,7 +806,7 @@ padding:4px 8px;
         }
 }
 
-/* Small devices (tablets, 768px and up) */
+ Small devices (tablets, 768px and up) 
 @media (min-width: 768px) {
     #quote-carousel {
         margin-bottom: 0;
@@ -825,9 +821,9 @@ padding:4px 8px;
         margin-right: 0px;
     }
 }
-/* Small devices (tablets, up to 768px) */
+ Small devices (tablets, up to 768px) 
 @media (max-width: 768px) {
-    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+     Make the indicators larger for easier clicking with fingers/thumb on mobile 
     #quote-carousel .carousel-indicators {
         bottom: -20px !important;
     }

@@ -1,0 +1,17 @@
+﻿@model QuizIT.ViewModels.CourseViewModel
+
+
+    <div class="course-container full-width">
+        @if (@Model.Course != null)
+        {
+            <p >@Model.Course.Title</p>
+            <p >@Model.Course.Author</p>
+            <div>@Model.Course.Description</div>
+        }
+        else
+        {
+            <p>Something went wrong</p>
+        }
+
+    </div>
+
