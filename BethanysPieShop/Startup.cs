@@ -27,7 +27,7 @@ namespace QuizIT
         {
             //services.AddTransient<IPieRepository, PieRepository>();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<ApplicationUser>()
         .AddEntityFrameworkStores<AppDbContext>()
         .AddDefaultTokenProviders()
         .AddDefaultUI();

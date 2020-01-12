@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
+@using QuizIT.Models
+@inject SignInManager<ApplicationUser> SignInManager
 <!DOCTYPE html>
 
 <html>
@@ -26,7 +27,7 @@
             <div class="navbar-collapse collapse">
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav layout-nav">
 
                         <li><a asp-controller="Home" asp-action="Index" class="navbar-brand">QuizIT</a></li>
                         <li><a asp-controller="Feedback" asp-action="Index" class="navbar-brand">Feedback</a></li>

@@ -8,6 +8,6 @@ namespace QuizIT.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public long Points { get; set; }
+        public int Points { get; set; }
     }
 }

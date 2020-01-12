@@ -15,6 +15,18 @@
     padding:20px;
 }
 
+ul{
+    float:right;
+}
+
+ul li{
+    float:left;
+}
+
+.layout-nav{
+    width:100%;
+}
+
 .full-width {
     width: calc(100% - 80px);
     box-sizing: border-box;
